@@ -1,4 +1,4 @@
-module my_Tinkoff_GoModule
+module github.com/MisterZurg/my_Tinkoff_GoModule
 
 go 1.21.0
 
