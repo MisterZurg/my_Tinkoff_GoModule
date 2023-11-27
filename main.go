@@ -3,18 +3,17 @@ package my_Tinkoff_GoModule
 import (
 	"fmt"
 	"os"
-	"time"
 
 	"gopkg.in/yaml.v3"
 )
 
 type Config struct {
-	Port      int           `yaml:"port"`
-	Host      string        `yaml:"host"`
-	TimeoutMS time.Duration `yaml:"timeout"`
+	Port      int    `yaml:"port"`
+	Host      string `yaml:"host"`
+	TimeoutMS int    `yaml:"timeout"`
 }
 
-func Yaml2Config(path string) (Config, error) {
+func YamlToConfig(path string) (Config, error) {
 	yamlFile, err := os.ReadFile(path)
 	if err != nil {
 		return Config{}, err
